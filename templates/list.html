@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+    <ul>
+        <li>제목 | 작성자 | 작성일</li>
+        {% for article in articles %}
+            <li><a href="/view/{{ article.id }}">{{ article.title }}</a> | {{ article.name }} | {{ article.reg_date|date:"D d M Y"}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

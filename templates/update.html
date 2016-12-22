@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+</head>
+    <body>
+        <form action="" method="post">
+        {% csrf_token %} <!-- 외부 공격을 방어하는 token -->
+        {{ form.as_p }} <!-- p tag 로 생성되는 form 을 만들겠다는 뜻 -->
+        <button type="submit" class="btn btn-primary" value="update">수정</button>
+    </form>
+    </body>
+</html>
